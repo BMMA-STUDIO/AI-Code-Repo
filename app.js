@@ -3,7 +3,7 @@ const express = require('express');
 // Create an express application
 const app = express();
 
-// Define the port
+// Define the port number local
 const port = 3000;
 
 // Create a GET route
