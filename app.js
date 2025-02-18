@@ -8,7 +8,7 @@ const port = 3000;
 
 // Create a GET route initials
 app.get('/', (req, res) => {
-    res.send("<h1>Hello. This is the index</h1>");
+    res.send("<h1>Hello. This is the bmma-app index</h1>");
     console.log("Running Get / Route")
 });
 
