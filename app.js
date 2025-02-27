@@ -8,6 +8,7 @@ app.set('view engine', 'ejs')
 
 //public folder
 app.use(express.static('public'));
+
 // Define the port number local
 const port = process.env.PORT || 3000;
 
@@ -35,11 +36,37 @@ app.get('/campaigns', (req, res) => {
 
 //About Company Route
 app.get('/about', (req, res) => {
-    res.send("Profile About Company + LinkedIn Link");
-    console.log("Campaigns")
-
+    res.render('about', {title: 'About'});
+    console.log("About")
 });
 
+//Renewals Company Route
+app.get('/renewals', (req, res) => {
+    res.render('renewals', {title: 'Upcoming Renewals'});
+    console.log("Renewals")
+});
+
+//User Route
+app.get('/user', (req, res) => {
+    res.render('user', {title: 'User Profile'});
+    console.log("User Profile")
+});
+
+app.get('/lounge', (req, res) => {
+    res.render('lounge', {title: 'Lounge'});
+    console.log("In the Lounge")
+});
+
+app.get('/community', (req, res) => {
+    res.render('community', {title: 'Community'});
+    console.log("Community Profile")
+});
+
+//POST Routes
+app.get('/signup', (req, res) => {
+    res.render('signup', {title: 'Sign Up'});
+    console.log("User Signup")
+}); //--CHANGE TO POST BEFORE TESTING---//
 
 // Server
 app.listen(port, () => {
