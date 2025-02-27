@@ -6,7 +6,8 @@ const app = express();
 //View engine
 app.set('view engine', 'ejs')
 
-
+//public folder
+app.use(express.static('public'));
 // Define the port number local
 const port = process.env.PORT || 3000;
 
