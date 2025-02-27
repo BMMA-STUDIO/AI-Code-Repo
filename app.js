@@ -8,7 +8,7 @@ app.set('view engine', 'ejs')
 
 
 // Define the port number local
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // GET routes --------------------------------------->
 //Index
@@ -32,11 +32,15 @@ app.get('/campaigns', (req, res) => {
 
 });
 
+//About Company Route
+app.get('/about', (req, res) => {
+    res.send("Profile About Company + LinkedIn Link");
+    console.log("Campaigns")
 
-
+});
 
 
 // Server
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on port ${port}`);
 });
