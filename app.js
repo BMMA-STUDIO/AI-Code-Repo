@@ -66,7 +66,7 @@ app.get('/community', (req, res) => {
 app.get('/signup', (req, res) => {
     res.render('signup', {title: 'Sign Up'});
     console.log("User Signup")
-}); //--CHANGE TO POST BEFORE TESTING---//
+}); //--CHANGE TO POST BEFORE DB TESTING---//
 
 // Server
 app.listen(port, () => {
