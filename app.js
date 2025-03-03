@@ -39,6 +39,8 @@ app.get('/campaignProfile', (req, res) => {
     console.log("Campaign Name")
 
 });
+
+
 //About Company Route
 app.get('/about', (req, res) => {
     res.render('about', {title: 'About'});
@@ -47,8 +49,13 @@ app.get('/about', (req, res) => {
 
 //Renewals Company Route
 app.get('/renewals', (req, res) => {
-    res.render('renewals', {title: 'Upcoming Renewals'});
-    console.log("Renewals")
+    res.render('renewals', {title: 'Upcoming Renewals: Login'});
+    console.log("Renewals Login")
+});
+
+app.get('/renewalsList', (req, res) => {
+    res.render('renewalsList', {title: 'Upcoming Renewals'});
+    console.log("Renewals List")
 });
 
 //User Route
@@ -57,6 +64,7 @@ app.get('/user', (req, res) => {
     console.log("User Profile")
 });
 
+//Capos and Lounges
 app.get('/invite', (req, res) => {
     res.render('invite', {title: 'Lounge Invite'});
     console.log("You are invited")
@@ -66,6 +74,7 @@ app.get('/loungeFeed', (req, res) => {
     console.log("In the Lounge Feed")
 });
 
+//Communities
 app.get('/community', (req, res) => {
     res.render('community', {title: 'Community'});
     console.log("Community Profile")
@@ -81,11 +90,13 @@ app.get('/community/signup', (req, res) => {
     console.log("Community Created")
 });
 
+//Carriers 
 app.get('/carrier', (req, res) => {
     res.render('carrier', {title: 'API'});
     console.log("API")
 });
 
+//Agents
 app.get('/agent', (req, res) => {
     res.render('agent', {title: 'Agent Profile'});
     console.log("Agent Profile")
