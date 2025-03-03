@@ -118,6 +118,10 @@ app.get('/signup', (req, res) => {
     console.log("User Signup")
 }); //--CHANGE TO POST BEFORE DB TESTING---//
 
+app.get('/payout', (req, res) => {
+    res.render('payout', {title: 'Payout Request'});
+    console.log("Payout Authorised")
+}); //--CHANGE TO POST BEFORE DB TESTING---//
 // Server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
