@@ -34,6 +34,11 @@ app.get('/campaigns', (req, res) => {
 
 });
 
+app.get('/campaignProfile', (req, res) => {
+    res.render('campaignProfile', {title: 'Campaign Name'});
+    console.log("Campaign Name")
+
+});
 //About Company Route
 app.get('/about', (req, res) => {
     res.render('about', {title: 'About'});
@@ -52,14 +57,38 @@ app.get('/user', (req, res) => {
     console.log("User Profile")
 });
 
-app.get('/lounge', (req, res) => {
-    res.render('lounge', {title: 'Lounge'});
-    console.log("In the Lounge")
+app.get('/invite', (req, res) => {
+    res.render('invite', {title: 'Lounge Invite'});
+    console.log("You are invited")
+});
+app.get('/loungeFeed', (req, res) => {
+    res.render('loungeFeed', {title: 'Lounge Feed'});
+    console.log("In the Lounge Feed")
 });
 
 app.get('/community', (req, res) => {
     res.render('community', {title: 'Community'});
     console.log("Community Profile")
+});
+
+app.get('/communityList', (req, res) => {
+    res.render('communityList', {title: 'Community Groups'});
+    console.log("Community List")
+});
+
+app.get('/community/signup', (req, res) => {
+    res.render('signup', {title: 'Create Community'});
+    console.log("Community Created")
+});
+
+app.get('/carrier', (req, res) => {
+    res.render('carrier', {title: 'API'});
+    console.log("API")
+});
+
+app.get('/agent', (req, res) => {
+    res.render('agent', {title: 'Agent Profile'});
+    console.log("Agent Profile")
 });
 
 //POST Routes
