@@ -91,6 +91,16 @@ app.get('/agent', (req, res) => {
     console.log("Agent Profile")
 });
 
+app.get('/agentList', (req, res) => {
+    res.render('agentList', {title: 'Agent List'});
+    console.log("Agent List")
+});
+
+app.get('/agentsListLoggedIn', (req, res) => {
+    res.render('agentsListLoggedIn', {title: 'Agent List LoggedIn'});
+    console.log("Agent List Logged In")
+});
+
 //POST Routes
 app.get('/signup', (req, res) => {
     res.render('signup', {title: 'Sign Up'});
