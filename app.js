@@ -24,7 +24,11 @@ app.get('/', (req, res) => {
 app.get('/404', (req, res) => {
     res.render('404', {title: '404'});
     console.log("Running 404")
+});
 
+app.get('/alert', (req, res) => {
+    res.render('alert', {title: 'Alert'});
+    console.log("Running Alert")
 });
 
 //Campaigns Route
@@ -122,6 +126,13 @@ app.get('/payout', (req, res) => {
     res.render('payout', {title: 'Payout Request'});
     console.log("Payout Authorised")
 }); //--CHANGE TO POST BEFORE DB TESTING---//
+
+
+app.get('/search', (req, res) => {
+    res.render('search', {title: 'Search'});
+    console.log("Search Query")
+}); //--CHANGE TO POST BEFORE DB TESTING---//
+
 // Server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
