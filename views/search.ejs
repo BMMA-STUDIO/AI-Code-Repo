@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f1f3f9;
+
+            margin: 0;
+        }
+
+        .form-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 18px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 85%;
+            max-width: 330px;
+            margin:1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        input {
+            width: 38%;
+            padding: 0.50rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+        }
+
+        button {
+            width: 30%;
+            padding: 0.65rem;
+            margin-top:0.5rem;
+            background: #0f0f0f;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #0168dddc;
+        }
+        h2 {
+            color: #1c1c1cfa;
+            font-family: "Raleway", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <label for="message">Search</label>
+<input type="tel" id="message" name="message" placeholder="Enter your query">
+    <button type="submit">Search</button>
+<br>
+<h4><a href="/">Back</a></h4>
+
+</body>
+</html>
