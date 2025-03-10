@@ -19,6 +19,11 @@ app.get('/', (req, res) => {
     console.log("Running Index")
 });
 
+app.get('/beema', (req, res) => {
+    res.render('beema');
+    console.log("Running Beema")
+});
+
 
 //404 View
 app.get('/404', (req, res) => {
