@@ -105,13 +105,18 @@
         /* Footer */
         footer {
             background: #f5f5f7;
-            color: #6e6e73;
-            font-size: 12px;
+            color: #606064;
+            font-size: 13px;
             padding: 20px 15px;
+            border-top-width: 3.5px;
+            border-top-style:solid;
+            border-image: linear-gradient(to right, rgba(182, 1, 152, 0.8), rgba(235, 173, 57, 0.8)) 1;
+
         }
 
         .footer-container {
             margin: 0 auto;
+
         }
 
         .footer-links {
@@ -204,78 +209,3 @@
             }
         }
     
-    /*Dialogue Box CSS*/
-    .dialog-container {
-        position: fixed;
-        top: 5%;
-        left: 5%;
-        width: 90%;
-        height: 90%;
-        border-radius: 9px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgba(173, 172, 172, 0.4);
-        z-index: 1000;
-    }
-    
-    .dialog-box {
-        background: #fff;
-        border-radius: 20px;
-        width: 300px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    }
-    
-    .dialog-content {
-        padding: 20px;
-        text-align: center;
-    }
-    
-    .dialog-content h3 {
-        margin: 0 0 10px 0;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-    }
-    
-    .dialog-content p {
-        margin: 0;
-        font-size: 14px;
-        color: #666;
-    }
-    
-    .dialog-buttons {
-        display: flex;
-        border-top: 1px solid #e5e5e5;
-    }
-    
-    .btn {
-        flex: 1;
-        border: none;
-        background: none;
-        padding: 12px;
-        font-size: 16px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: background 0.2s;
-    }
-    
-    .no-btn {
-        color: #007aff;
-        border-right: 1px solid #e5e5e5;
-    }
-    
-    .yes-btn {
-        color: #007aff;
-        font-weight: 600;
-    }
-    
-    .no-btn:hover {
-        background: #f5f5f5;
-    }
-    
-    .yes-btn:hover {
-        background: #f5f5f5;
-    }
