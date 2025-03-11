@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css" type="text/css">
-
-    <title>Document</title>
-</head>
+<%-include ('header'); -%>
 <body>
-    <h1>SOMETHING WENT WRONG.<h2>Refresh the view and try again.</h2></h1>
+<main>
+    <h1>SOMETHING WENT 404.<h2>Refresh the view and try again.</h2></h1>
     <h4><a href="/beema">Home</a></h4>
+</main>
+<%-include ('footer'); -%>
+<script>
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
 </body>
 </html>

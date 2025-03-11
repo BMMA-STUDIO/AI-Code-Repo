@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css" type="text/css">
-    <title>Document</title>
-</head>
+
+<%-include ('header'); -%>
 <body>
+<main>
     <h5><a href="user">Login</a> To Request Complete User Profile</h5>
     <h1> USER PROFILE 
         <h2>Socials: FB. TWX. In. INST</h2> 
@@ -15,5 +10,16 @@
         <h4><a href="/beema">Home</a></h4>
 
     </h1>
+</main>
+<%-include ('footer'); -%>
+<script>
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
