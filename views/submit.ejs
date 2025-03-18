@@ -1,0 +1,34 @@
+
+<%-include ('header'); -%>
+<body>
+<main>
+    <h5><a href="user">Login</a> To Request Complete User Profile</h5>
+    <h1> USER PROFILE 
+        <h2>Socials:</h2>
+        <p><%= textInput %></p>
+
+        <h2>Policy & Renewal:</h2>
+        <p><%= dateInput %></p>
+        
+        <br>
+        <h4>Display Ad: One</h4>
+        <h5>Display Ad: Two</h5>
+        <h5>Display Ad: Internal</h5>
+        <br>
+        <h4><a href="/beema">Home</a></h4>
+        <h4><a href="/user">View Full DB Profile</a></h4>
+
+    </h1>
+</main>
+<%-include ('footer'); -%>
+<script>
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
+</body>
+</html>
