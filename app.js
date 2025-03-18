@@ -3,6 +3,9 @@ const express = require('express');
 // Create an express application
 const app = express();
 
+//Parse form
+app.use(express.urlencoded({ extended: true }));
+
 //View engine
 app.set('view engine', 'ejs')
 
@@ -67,11 +70,7 @@ app.get('/renewalsList', (req, res) => {
     console.log("Renewals List")
 });
 
-//User Route
-app.get('/user', (req, res) => {
-    res.render('user', {title: 'User Profile'});
-    console.log("User Profile")
-});
+
 
 //Capos and Lounges
 app.get('/invite', (req, res) => {
@@ -99,7 +98,7 @@ app.get('/community/signup', (req, res) => {
     console.log("Community Created")
 });
 
-//Carriers USE res.json()
+//CarriersAPI USE res.json()
 app.get('/carrier', (req, res) => {
     res.render('carrier', {title: 'API'});
     console.log("API")
@@ -127,6 +126,33 @@ app.get('/signup', (req, res) => {
     console.log("User Signup")
 }); //--CHANGE TO POST BEFORE DB TESTING---//
 
+//XFORM Section
+app.get('/xForm', (req, res) => {
+    res.render('xForm', { submitted: false });
+});
+
+app.post('/submit', (req, res) => {
+    const { textInput, dateInput } = req.body;
+    // Render the same form with submitted data
+    res.render('submit', { 
+        submitted: true,
+        textInput: textInput,
+        dateInput: dateInput 
+    });
+    console.log(req.body)
+});
+
+//User Route
+app.get('/user', (req, res) => {
+    res.render('user', {
+        title: 'User Profile',
+         //textInput: textInput,
+          //dateInput: dateInput
+      });
+      console.log("User Profile")
+  });
+
+//Payout
 app.get('/payout', (req, res) => {
     res.render('payout', {title: 'Payout Request'});
     console.log("Payout Authorised")
