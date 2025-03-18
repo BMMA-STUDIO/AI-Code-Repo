@@ -99,7 +99,7 @@ app.get('/community/signup', (req, res) => {
     console.log("Community Created")
 });
 
-//Carriers 
+//Carriers USE res.json()
 app.get('/carrier', (req, res) => {
     res.render('carrier', {title: 'API'});
     console.log("API")
