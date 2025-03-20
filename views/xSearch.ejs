@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gradient Search Bar</title>
+    <style>
+        /* Container for centering */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #ffffff;
+        }
+
+        /* Search bar styling */
+        .search-bar {
+            position: relative;
+            width: 300px;
+            height: 48px;
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            
+            /* Multiple box-shadows for diagonal gradient effect */
+            box-shadow: 
+                -4px 4px 8px rgba(116, 114, 215, 0.13),   /* Purple - lower left */
+                -2px 2px 12px rgba(251, 88, 118, 0.15),  /* Pink - middle transition */
+                2px -2px 16px rgba(250, 173, 65, 0.16);   /* Orange - upper right */
+            
+            transition: all 0.3s ease;
+        }
+
+        /* Input styling */
+        .search-bar input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            padding: 0 40px 0 15px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            color: #333;
+            outline: none;
+        }
+
+        /* Placeholder styling */
+        .search-bar input::placeholder {
+            color: #999;
+        }
+
+        /* Search icon */
+        .search-bar::after {
+            content: '🔍';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Hover effect */
+        .search-bar:hover {
+            box-shadow: 
+                -6px 6px 9px rgba(88, 86, 214, 0.14),
+                -3px 3px 13px rgba(255, 45, 85, 0.16),
+                3px -3px 16px rgba(255, 149, 0, 0.17);
+        }
+
+        /* Focus effect */
+        .search-bar:focus-within {
+            border-color: #eeeef4;
+            box-shadow: 
+                -6px 6px 10px rgba(88, 86, 214, 0.3),
+                -3px 3px 14px rgba(255, 45, 85, 0.2),
+                3px -3px 18px rgba(255, 149, 0, 0.15);
+        }
+    </style>
+</head>
+<%-include ('header'); -%>
+<body>
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search here...">
+        </div>
+    </div>
+</body>
+</html>
