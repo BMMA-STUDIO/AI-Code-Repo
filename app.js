@@ -27,6 +27,10 @@ app.get('/beema', (req, res) => {
     console.log("Running Beema")
 });
 
+app.get('/xSearch', (req, res) => {
+    res.render('xSearch');
+    console.log("Running xSearch")
+});
 
 //404 View
 app.get('/404', (req, res) => {
@@ -130,6 +134,7 @@ app.get('/signup', (req, res) => {
 app.get('/xForm', (req, res) => {
     res.render('xForm', { submitted: false });
 });
+
 
 app.post('/submit', (req, res) => {
     const { textInput, dateInput } = req.body;

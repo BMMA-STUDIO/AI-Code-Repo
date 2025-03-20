@@ -25,6 +25,7 @@
             padding: 3rem;
             border-radius: 18px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            
             width: 85%;
             max-width: 330px;
             margin:1rem;
@@ -45,7 +46,11 @@
             width: 38%;
             padding: 0.50rem;
             border: 1px solid #ddd;
-            border-radius: 6px;
+            box-shadow: 
+                -4px 4px 8px rgba(116, 114, 215, 0.1),   /* Purple - lower left */
+                -2px 2px 12px rgba(251, 88, 118, 0.1),  /* Pink - middle transition */
+                2px -2px 16px rgba(250, 173, 65, 0.10);   /* Orange - upper right */
+            border-radius: 16px;
             font-size: 1rem;
             transition: border-color 0.3s ease;
         }
@@ -57,12 +62,12 @@
         }
 
         button {
-            width: 30%;
+            width: 10%;
             padding: 0.65rem;
             margin-top:0.5rem;
             background: #0f0f0f;
             border: none;
-            border-radius: 8px;
+            border-radius: 18px;
             color: white;
             font-size: 1rem;
             cursor: pointer;
@@ -78,6 +83,8 @@
         }
     </style>
 </head>
+<%-include ('header'); -%>
+
 <body>
     <label for="message">Search</label>
 <input type="tel" id="message" name="message" placeholder="Enter your query">

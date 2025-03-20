@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alert</title>
     
 <style>
     .dialog-container {
@@ -16,17 +16,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: rgba(229, 227, 227, 0.4);
+        background: rgba(229, 227, 227, 0);
         z-index: 1000;
         box-shadow: 3px 3px -4px 9px rgb(236, 237, 238);
-
+        
     }
     
     .dialog-box {
         background: #fff;
         border-radius: 20px;
         width: 300px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 
+                -4px 4px 8px rgba(116, 114, 215, 0.1),   /* Purple - lower left */
+                -2px 2px 12px rgba(251, 88, 118, 0.1),  /* Pink - middle transition */
+                2px -2px 16px rgba(250, 173, 65, 0.10);   /* Orange - upper right */
+            
         overflow: hidden;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
@@ -84,6 +88,7 @@
     }
     </style>
 </head>
+<%-include ('header'); -%>
 <body>
     <div class="dialog-container">
         <div class="dialog-box">

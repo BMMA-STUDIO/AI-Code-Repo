@@ -13,7 +13,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f0f1f3f9;
+            background-color: #f5f6f8f9;
 
             margin: 0;
         }
@@ -22,7 +22,12 @@
             background: white;
             padding: 3rem;
             border-radius: 18px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+            box-shadow: 
+                -4px 4px 8px rgba(116, 114, 215, 0.1),   /* Purple - lower left */
+                -2px 2px 12px rgba(251, 88, 118, 0.1),  /* Pink - middle transition */
+                2px -2px 16px rgba(250, 173, 65, 0.10);   /* Orange - upper right */
+            
             width: 85%;
             max-width: 330px;
             margin:1rem;
@@ -52,6 +57,8 @@
             outline: none;
             border-color: #007bff;
             box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+
+        
         }
 
         button {
@@ -75,12 +82,13 @@
         }
     </style>
 </head>
+<%-include ('header'); -%>
 <body>
     <div class="form-container">
-        <h2>Sign Up</h2>
+        <h2>Verify Your Profile</h2>
         <form>
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Social Link</label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
@@ -88,10 +96,10 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="message">Renew Date</label>
+                <label for="message">Policy</label>
                 <input type="text" id="message" name="message" required>
             </div>
-            <button type="submit">Sign Me Up</button>
+            <button type="submit">Verify Me</button>
         </form>
         <h4><a href="/beema">Home</a></h4>
     </div>
