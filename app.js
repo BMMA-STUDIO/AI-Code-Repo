@@ -32,6 +32,7 @@ app.get('/xSearch', (req, res) => {
     console.log("Running xSearch")
 });
 
+
 //404 View
 app.get('/404', (req, res) => {
     res.render('404', {title: '404'});
@@ -168,6 +169,12 @@ app.get('/search', (req, res) => {
     res.render('search', {title: 'Search'});
     console.log("Search Query")
 }); //--CHANGE TO POST BEFORE DB TESTING---//
+
+
+//Error handler
+app.use((req, res) => {
+    res.status(404).render("404");
+});
 
 // Server
 app.listen(port, () => {
