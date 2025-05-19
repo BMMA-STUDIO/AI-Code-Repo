@@ -66,7 +66,7 @@ app.get('/about', (req, res) => {
 
 //Renewals Company Route
 app.get('/renewals', (req, res) => {
-    res.render('renewals', {title: 'Upcoming Renewals: Login'});
+    res.render('renewalsList', {title: 'Upcoming Renewals: Login'});
     console.log("Renewals Login")
 });
 
@@ -111,7 +111,7 @@ app.get('/carrier', (req, res) => {
 
 //Agents
 app.get('/agent', (req, res) => {
-    res.render('agent', {title: 'Agent Profile'});
+    res.render('agentsListLoggedIn', {title: 'Agent Profile'});
     console.log("Agent Profile")
 });
 
