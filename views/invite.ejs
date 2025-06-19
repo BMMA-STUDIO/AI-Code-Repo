@@ -1,16 +1,43 @@
 
 <%-include ('header'); -%>
 <body>
-<main>
-    <h2> Your Lounge PROFILE: Share to Invite </h2>
-       <h3> SocialTree: FB. TWX. In. INST</h3> 
-        <h4>Link: Url://app.lounge/this:id</h4>
-    </h1>
-    <br>
-    <h4><a href="payout">Request Payout</a></h4>
-    <br>
-    <h4><a href="/">Home</a></h4>
-</main>
+    <main style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f9f9f9; padding: 40px; color: #1d1d1f; display: flex; flex-direction: column; align-items: center;">
+
+        <!-- Profile Card -->
+        <div style="background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); border-radius: 20px; padding: 30px; width: 100%; max-width: 480px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06); text-align: center; margin-bottom: 40px;">
+            <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 16px;">Verified User</h2>
+            <p style="font-size: 16px; color: #6e6e73; margin-bottom: 24px;">Share to Invite</p>
+    
+            <!-- SocialTree Icons (Fake Icons for Now) -->
+            <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 20px;">
+                <span style="background: linear-gradient(45deg, #4267B2, #29487d); color: white; padding: 8px 14px; border-radius: 12px; font-size: 14px; font-weight: 500;">FB</span>
+                <span style="background: linear-gradient(45deg, #1DA1F2, #0d8ddf); color: white; padding: 8px 14px; border-radius: 12px; font-size: 14px; font-weight: 500;">TWX</span>
+                <span style="background: linear-gradient(45deg, #0a66c2, #004182); color: white; padding: 8px 14px; border-radius: 12px; font-size: 14px; font-weight: 500;">In</span>
+                <span style="background: linear-gradient(45deg, #feda75, #d62976, #962fbf); color: white; padding: 8px 14px; border-radius: 12px; font-size: 14px; font-weight: 500;">INST</span>
+            </div>
+    
+            <!-- Share Link -->
+            <h4 style="font-size: 15px; color: #1d1d1f; margin-top: 20px; word-break: break-word;">
+                Link: <span style="color: #00aae3;">Url://app.lounge/this:id</span>
+            </h4>
+        </div>
+    
+        <!-- Action Buttons -->
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <a href="payout" style="text-decoration: none;">
+                <button style="background-color: #fff; color: #11a301; border: 1px solid #cfffcc; border-radius: 10px; padding: 12px 24px; font-size: 15px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.05); cursor: pointer;">
+                    Request Payout
+                </button>
+            </a>
+            <a href="/" style="text-decoration: none;">
+                <button style="background-color: #fff; color: #00aae3; border: 1px solid #cceeff; border-radius: 10px; padding: 12px 24px; font-size: 15px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.05); cursor: pointer;">
+                    Home
+                </button>
+            </a>
+        </div>
+    
+    </main>
+    
 <%-include ('footer'); -%>
 <script>
     // Hamburger menu toggle
